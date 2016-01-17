@@ -10,7 +10,7 @@ public class Application {
         Spark.port(getHerokuAssignedPort());
         Spark.get("/hello"  , (req,res) -> "Hello world");
         Spark.get("/hello/:name"  , (req,res) -> "Hello "+req.params(":name"));
-        Spark.get("/greeting"  , (req,res) -> greeting(req,res));
+        Spark.get("/greeting"  , (req,res) -> greeting(req,res), new JsonTransformer());
     }
 
     private static Greeting greeting(Request req, Response res) {

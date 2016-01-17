@@ -23,9 +23,9 @@ mainClassName = 'sparkjar.Application'
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
-    compile("org.postgresql:postgresql:9.4.1207.jre7")
+    compile 'org.postgresql:postgresql:9.4.1207.jre7'
     compile 'com.sparkjava:spark-core:2.3'
-
+    compile 'com.google.code.gson:gson:2.5'
     testCompile 'junit:junit:4.12'
 }
 
