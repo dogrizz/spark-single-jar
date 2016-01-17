@@ -1,5 +1,12 @@
 ##What is this
 Just an attempt at creating a single jar app deployable on heroku.
+This one uses sparkjava which runs on jetty.
+
+## Build and run
+Building:
+`./gradlew shadowJar`
+Run
+Either `./gradlew run` or `java -jar build/libs/spark-single-jar-all.jar`
 
 ##Demo
 https://guarded-waters-7028.herokuapp.com/hello/Jerzy
