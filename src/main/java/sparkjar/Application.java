@@ -8,8 +8,8 @@ public class Application {
 
     public static void main(String[] args){
         Spark.port(getHerokuAssignedPort());
-        Spark.get("/hello"  , (req,res) -> "Hello world");
-        Spark.get("/hello/:name"  , (req,res) -> "Hello "+req.params(":name"));
+        Spark.get("/hello"  , (req,res) -> "Hello world", new JsonTransformer());
+        Spark.get("/hello/:name"  , (req,res) -> "Hello "+req.params(":name"), new JsonTransformer());
         Spark.get("/greeting"  , (req,res) -> greeting(req,res), new JsonTransformer());
     }
 
